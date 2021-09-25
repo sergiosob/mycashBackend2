@@ -2,10 +2,10 @@ package com.mycash.mycash;
 
 import java.util.stream.LongStream;
 
-import org.springframework.boot.CommandLineRunner;
+//import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.Bean;
+//import org.springframework.context.annotation.Bean;
 
 import com.mycash.mycash.model.Despesa;
 import com.mycash.mycash.model.Receita;
@@ -18,7 +18,7 @@ public class MycashApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(MycashApplication.class, args);
 	}	
-		@Bean
+/*		@Bean
 		CommandLineRunner init(DespesaRepository despesaRepository, ReceitaRepository receitaRepository) {
 		return args -> {
 				despesaRepository.deleteAll();	
@@ -50,5 +50,5 @@ public class MycashApplication {
 		.forEach(System.out::println);
 	};
 		
-	}
+	}*/
 }
