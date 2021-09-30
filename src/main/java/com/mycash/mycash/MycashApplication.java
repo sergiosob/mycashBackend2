@@ -7,10 +7,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 //import org.springframework.context.annotation.Bean;
 
-import com.mycash.mycash.model.Despesa;
-import com.mycash.mycash.model.Receita;
-import com.mycash.mycash.repository.DespesaRepository;
-import com.mycash.mycash.repository.ReceitaRepository;
+//import com.mycash.mycash.model.Despesa;
+//import com.mycash.mycash.model.Receita;
+//import com.mycash.mycash.repository.DespesaRepository;
+//import com.mycash.mycash.repository.ReceitaRepository;
 
 @SpringBootApplication
 public class MycashApplication {
