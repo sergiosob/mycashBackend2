@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -18,6 +19,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.mycash.mycash.model.Receita;
 import com.mycash.mycash.repository.ReceitaRepository;
 
+@CrossOrigin
 @RestController
 @RequestMapping({"/receita"})
 public class ReceitaController {
@@ -53,7 +55,7 @@ public class ReceitaController {
 					record.setData(receita.getData());
 					record.setDescricao(receita.getDescricao());
 					record.setFixo(receita.isFixo());
-					record.setTipo(receita.getTipo());
+					//record.setTipo(receita.getTipo());
 					record.setValor(receita.getValor());
 					Receita update = repository.save(record);
 					return ResponseEntity.ok().body(update);
@@ -62,7 +64,7 @@ public class ReceitaController {
 	}
 	
 	@DeleteMapping(path = {"/{id}"})
-	@PreAuthorize("hasRole('ADMIN)")
+//	@PreAuthorize("hasRole('ADMIN)")
 //	http://locahost:8095/receita/{id}
 	public ResponseEntity<?> delete (@PathVariable long id){
 		return repository.findById(id)
